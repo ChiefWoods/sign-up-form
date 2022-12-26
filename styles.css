@@ -1,0 +1,33 @@
+@font-face {
+  font-family: Norse-Bold;
+  src: url(./fonts/Norse-Bold.otf) format("opentype");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+footer {
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  background-color: #0D1117;
+}
+
+.made-by {
+  color: white;
+  font-size: 15px;
+  font-family: cursive;
+  margin: 0 auto;
+}
+
+.github-link {
+  position: relative;
+  right: 37.5px;
+}
+
+.github-icon {
+  height: 27.5px;
+}
