@@ -9,6 +9,27 @@
   box-sizing: border-box;
 }
 
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+.container-left {
+  background-image: url(./images/ferns.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 1 300px;
+}
+
+.container-left > div {
+  background-color: rgba(29, 29, 29, 0.615);
+}
+
+.container-right {
+  flex: 1.5 700px;
+}
+
 footer {
   height: 8vh;
   display: flex;
