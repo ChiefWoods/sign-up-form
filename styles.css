@@ -97,7 +97,6 @@ form > div:first-of-type {
   padding: 15px 50px;
   box-shadow: 3px 5px 5px 2px rgba(209,209,209,0.75);
   position: relative;
-  height: 310px;
 }
 
 form > div:first-of-type > span {
@@ -115,6 +114,10 @@ form > div:first-of-type > span {
   gap: 20px;
   margin-block: 20px;
   width: 80%;
+}
+
+.container-inputs > div {
+  height: 50px;
 }
 
 label {
@@ -144,16 +147,20 @@ input {
 input:focus {
   box-shadow: 2px 2px 5px 0px rgba(150,150,150,0.75);
   border-color: rgb(0, 119, 255);
+  outline: none;
 }
 
-.invalid {
-  box-shadow: none;
-  border-color:crimson;
+.help::before {
   font-family: Calibri, sans-serif;
   font-size: 12px;
   font-weight: bold;
   content: "* Passwords do not match";
   color: crimson;
+}
+
+.invalid {
+  box-shadow: none;
+  border-color:crimson;
 }
 
 form > div:last-of-type {
