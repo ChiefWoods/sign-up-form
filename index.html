@@ -7,27 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign-Up Form</title>
   <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
 </head>
 
 <body>
   <main>
     <section class="container-left">
       <div>
-        <img src="./images/odin-lined.png" alt="logo of The Odin Project">
-        <h1>ODIN</h1>
+        <img class="logo-image" src="./images/odin-lined.png" alt="logo of The Odin Project">
+        <h1 class="logo-text">ODIN</h1>
       </div>
       <span>Photo by <a href="https://unsplash.com/@haliewestphoto" target="_blank">Halie West</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a></span>
     </section>
     <section class="container-right">
       <div>
         <p>This is not a real online service! You know you need something like this in your life to help you realize
-          your deepest dreams. Sign up <em>now</em> to get started.</p>
+          your deepest dreams.<br>Sign up <em>now</em> to get started.</p>
         <p>You <em>know</em> you want to.</p>
       </div>
       <form action="">
         <div>
           <span>Let's do this!</span>
-          <div>
+          <div class="container-inputs">
             <div>
               <label for="first-name">FIRST NAME</label>
               <input type="text" required>
@@ -46,17 +47,18 @@
             </div>
             <div>
               <label for="password">PASSWORD</label>
-              <input type="password" required>
+              <input class="password" type="password" required>
+              <span></span>
             </div>
             <div>
               <label for="confirm">CONFIRM PASSWORD</label>
-              <input type="password" required>
+              <input class="confirm" type="password" required>
             </div>
           </div>
         </div>
         <div>
           <button type="submit">Create Account</button>
-          <span>Already have an account? <a>Log in</a></span>
+          <span>Already have an account? <a href="#">Log in</a></span>
         </div>
       </form>
     </section>
