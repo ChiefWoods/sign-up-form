@@ -5,28 +5,27 @@ const span = document.querySelector(".password ~ span");
 const inputs = document.querySelectorAll("input");
 
 form.noValidate = true;
+
 form.addEventListener("submit", e => {
   if (!e.target.checkValidity()) {
     e.preventDefault();
     inputs.forEach(input => {
       if (!input.checkValidity()) {
-        input.classList.add("invalid");
+        input.classList.add("error");
       } else {
-        input.classList.remove("invalid");
+        input.classList.remove("error");
       }
     })
   };
   if (!isPasswordSame()) {
     e.preventDefault();
-    password.classList.add("invalid");
-    confirmPassword.classList.add("invalid");
+    password.classList.add("error");
+    confirmPassword.classList.add("error");
     span.classList.add("help");
-    console.log("not same");
   } else {
-    password.classList.remove("invalid");
-    confirmPassword.classList.remove("invalid");
+    password.classList.remove("error");
+    confirmPassword.classList.remove("error");
     span.classList.remove("help");
-    console.log("SAME");
   }
 });
 
