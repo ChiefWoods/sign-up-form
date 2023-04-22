@@ -1,39 +1,20 @@
-const password = document.querySelector(".password");
-const confirmPassword = document.querySelector(".confirm");
-const form = document.querySelector("form");
-const span = document.querySelector(".password ~ span");
-const inputs = document.querySelectorAll("input");
+// const form = document.querySelector('form');
+const inputs = document.querySelectorAll('input');
+// const firstName = document.querySelector('.first-name');
+// const lastName = document.querySelector('.last-name');
+// const email = document.querySelector('input[type="email"]');
+// const phone = document.querySelector('input[type="tel"]');
+// const password = document.querySelector('.password');
+// const confirm = document.querySelector('.confirm');
 
-form.noValidate = true;
+// function checkSamePassword() {
+//   return (password.value !== '' && confirm.value !== '' && password.value === confirm.value);
+// }
 
-form.addEventListener("submit", e => {
-  if (!e.target.checkValidity()) {
-    e.preventDefault();
-    inputs.forEach(input => {
-      if (!input.checkValidity()) {
-        input.classList.add("error");
-      } else {
-        input.classList.remove("error");
-      }
-    })
-  };
-  if (!isPasswordSame()) {
-    e.preventDefault();
-    password.classList.add("error");
-    confirmPassword.classList.add("error");
-    span.classList.add("help");
+inputs.forEach(input => input.addEventListener('input', e => {
+  if (!e.target.validity.valid) {
+    e.target.classList.add('error');
   } else {
-    password.classList.remove("error");
-    confirmPassword.classList.remove("error");
-    span.classList.remove("help");
+    e.target.classList.remove('error');
   }
-});
-
-
-function isPasswordSame() {
-  if (password.value !== confirmPassword.value || password.value === "" || confirmPassword.value === "") {
-    return false;
-  } else if (password.value === confirmPassword.value && password.value !== "") {
-    return true;
-  }
-}
+}))

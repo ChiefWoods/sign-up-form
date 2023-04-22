@@ -1,77 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign-Up Form</title>
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./script.js" defer></script>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+  </head>
 
-<body>
-  <main>
-    <section class="container-left">
-      <div>
-        <img class="logo-image" src="./images/odin-lined.png" alt="logo of The Odin Project">
-        <h1 class="logo-text">ODIN</h1>
-      </div>
-      <span>Photo by <a href="https://unsplash.com/@haliewestphoto" target="_blank">Halie West</a> on <a
-          href="https://unsplash.com/" target="_blank">Unsplash</a></span>
-    </section>
-    <section class="container-right">
-      <div>
-        <p>This is not a real online service! You know you need something like this in your life to help you realize
-          your deepest dreams.<br>Sign up <em>now</em> to get started.</p>
-        <p>You <em>know</em> you want to.</p>
-      </div>
-      <form action="">
-        <div>
-          <span>Let's do this!</span>
-          <div class="container-inputs">
-            <div>
-              <label for="first-name">FIRST NAME<span class="asterisk">*</span></label>
-              <input type="text" required>
-            </div>
-            <div>
-              <label for="last-name">LAST NAME<span class="asterisk">*</span></label>
-              <input type="text" required>
-            </div>
-            <div>
-              <label for="email">EMAIL<span class="asterisk">*</span></label>
-              <input type="email" required>
-            </div>
-            <div>
-              <label for="phone">PHONE NUMBER</label>
-              <input type="tel">
-            </div>
-            <div>
-              <label for="password">PASSWORD<span class="asterisk">*</span></label>
-              <input class="password" type="password" min="8" required>
-              <span></span>
-            </div>
-            <div>
-              <label for="confirm">CONFIRM PASSWORD<span class="asterisk">*</span></label>
-              <input class="confirm" type="password" min="8" required>
-            </div>
-          </div>
+  <body>
+    <main>
+      <section class="hero-side">
+        <div class="container-logo">
+          <img src="./images/odin-lined.png" alt="TOP logo" class="logo">
+          <h1 class="logo-text">ODIN</h1>
         </div>
-        <div>
-          <button type="submit">Create Account</button>
-          <span>Already have an account? <a href="#">Log in</a></span>
+        <p class="credits">Photo by <a href="https://unsplash.com/@haliewestphoto" target="_blank">Halie West</a> on
+          <a href="https://unsplash.com/" target="_blank">Unsplash</a>
+        </p>
+      </section>
+      <section class="hero-main">
+        <div class="container-hero-top">
+          <p>This is not a real online service! You know you need something like this in your life to help you realize
+            your deepest dreams. Sign up <em>now</em> to get started.</p>
+          <p>You <em>know</em> you want to.</p>
         </div>
-      </form>
-    </section>
-  </main>
-  <footer>
-    <span class="made-by">Copyright @
-      <script>document.write(new Date().getFullYear())</script> ChiefWoods
-    </span>
-    <a class="github-link" href="https://github.com/ChiefWoods/sign-up-form" target="_blank">
-      <img src="./icons/github.svg" class="github-icon" alt="GitHub">
-    </a>
-  </footer>
-</body>
+        <form action="" id="create-account">
+          <h2>Let's do this!</h2>
+          <label>FIRST NAME <span class="asterisk">*</span><input type="text" class="first-name" minlength="3" required></label>
+          <label>LAST NAME <span class="asterisk">*</span><input type="text" class="last-name" minlength="3" required></label>
+          <label>EMAIL <span class="asterisk">*</span><input type="email" required></label>
+          <label>PHONE NUMBER<input type="tel" pattern="\d{0,10}"></label>
+          <label>PASSWORD <span class="asterisk">*</span><input type="password" minlength="3" class="password" required></label>
+          <label>CONFIRM PASSWORD <span class="asterisk">*</span><input type="password" minlength="3" class="confirm" required></label>
+        </form>
+        <div class="container-hero-bottom">
+          <button form="create-account">Create Account</button>
+          <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span class="made-by">Copyright @
+        <script>document.write(new Date().getFullYear())</script> ChiefWoods
+      </span>
+      <a class="github-link" href="https://github.com/ChiefWoods/sign-up-form" target="_blank">
+        <img src="./icons/github.svg" class="github-icon" alt="GitHub">
+      </a>
+    </footer>
+  </body>
 
 </html>
