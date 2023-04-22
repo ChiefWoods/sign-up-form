@@ -1,10 +1,17 @@
 @font-face {
   font-family: Norse-Bold;
-  src: url(./fonts/Norse-Bold.otf) format("opentype");
+  src: url(./fonts/Norse_Bold/Norse-Bold.otf) format("opentype");
 }
 
-:root {
-  overflow-x: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  --github-black: #0D1117;
   --button-olive: #596D48;
   --input-border-light: #E5E7EB;
   --white-text: rgb(207, 207, 207);
@@ -12,15 +19,20 @@
   --logo-height: 110px;
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+body {
+  /* min-height: 100vh;
+  display: flex;
+  flex-direction: column; */
+  display: inline-flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: calc(100vw - (100vw - 100%));
 }
 
 main {
+  flex: 1;
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
 }
 
@@ -205,25 +217,22 @@ form > div:last-of-type > span > a {
   color: var(--button-olive)
 }
 
+/* Footer */
+
 footer {
-  height: 8vh;
   display: flex;
   align-items: center;
-  background-color: #0D1117;
+  background-color: var(--github-black);
+  padding: 12px 40px;
 }
 
 .made-by {
-  color: white;
-  font-size: 15px;
+  font-size: 12px;
   font-family: cursive;
+  color: white;
   margin: 0 auto;
 }
 
-.github-link {
-  position: relative;
-  right: 37.5px;
-}
-
 .github-icon {
-  height: 27.5px;
+  height: 25px;
 }
