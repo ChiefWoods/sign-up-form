@@ -141,17 +141,16 @@ input {
   font-family: Heebo, sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
-  outline-color: #456DDD;
   min-width: 200px;
 }
 
-input:focus {
+input:active, input:focus {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  outline-color: #456DDD;
 }
 
 .error {
   border-color: red;
-  box-shadow: none;
 }
 
 .container-hero-bottom {

@@ -1,20 +1,37 @@
-// const form = document.querySelector('form');
+const form = document.querySelector('form');
 const inputs = document.querySelectorAll('input');
-// const firstName = document.querySelector('.first-name');
-// const lastName = document.querySelector('.last-name');
-// const email = document.querySelector('input[type="email"]');
-// const phone = document.querySelector('input[type="tel"]');
-// const password = document.querySelector('.password');
-// const confirm = document.querySelector('.confirm');
+const password = document.querySelector('.password');
+const confirmPassword = document.querySelector('.confirm');
+const button = document.querySelector('button[form="create-account"]');
 
-// function checkSamePassword() {
-//   return (password.value !== '' && confirm.value !== '' && password.value === confirm.value);
-// }
-
-inputs.forEach(input => input.addEventListener('input', e => {
-  if (!e.target.validity.valid) {
-    e.target.classList.add('error');
+function validateSamePassword() {
+  if (password.value !== confirmPassword.value) {
+    password.setCustomValidity('Passwords do not match.');
+    password.classList.add('error');
+    confirmPassword.classList.add('error');
   } else {
-    e.target.classList.remove('error');
+    password.setCustomValidity('');
+    password.classList.remove('error');
+    confirmPassword.classList.remove('error');
   }
-}))
+}
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+});
+
+button.addEventListener('click', () => {
+  inputs.forEach(input => {
+    if (!input.checkValidity()) {
+      input.classList.add('error');
+    } else {
+      input.classList.remove('error');
+    }
+  })
+  if (password.value !== '' && confirmPassword.value !== '') {
+    validateSamePassword();
+  }
+  if (form.checkValidity()) {
+    form.submit();
+  }
+})
