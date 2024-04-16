@@ -6,40 +6,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="https://chiefwoods.github.io/footer-template/template.css">
     <link rel="stylesheet" href="./styles.css">
     <script src="./script.js" defer></script>
   </head>
 
   <body>
-    <main>
-      <section class="hero-side">
-        <div class="container-logo">
-          <img src="./images/odin-lined.png" alt="TOP logo" class="logo">
-          <h1 class="logo-text">ODIN</h1>
-        </div>
-        <p class="credits">Photo by <a href="https://unsplash.com/@haliewestphoto" target="_blank">Halie West</a> on
-          <a href="https://unsplash.com/" target="_blank">Unsplash</a>
-        </p>
+    <aside>
+      <div class="container-logo">
+        <img src="./images/odin-lined.png" alt="TOP logo" class="logo">
+        <h1 class="logo-text">ODIN</h1>
+      </div>
+      <p class="credits">Photo by <a href="https://unsplash.com/@haliewestphoto" target="_blank">Halie West</a> on
+        <a href="https://unsplash.com/" target="_blank">Unsplash</a>
+      </p>
+    </aside>
+    <main class="hero-main">
+      <section class="container-hero-top">
+        <p>This is not a real online service! You know you need something like this in your life to help you realize
+          your deepest dreams. Sign up <em>now</em> to get started.</p>
+        <p>You <em>know</em> you want to.</p>
       </section>
-      <section class="hero-main">
-        <div class="container-hero-top">
-          <p>This is not a real online service! You know you need something like this in your life to help you realize
-            your deepest dreams. Sign up <em>now</em> to get started.</p>
-          <p>You <em>know</em> you want to.</p>
-        </div>
-        <form action="" id="create-account">
-          <h2>Let's do this!</h2>
-          <label>FIRST NAME <span class="asterisk">*</span><input type="text" class="first-name" minlength="3" required></label>
-          <label>LAST NAME <span class="asterisk">*</span><input type="text" class="last-name" minlength="3" required></label>
-          <label>EMAIL <span class="asterisk">*</span><input type="email" required></label>
-          <label>PHONE NUMBER<input type="tel" pattern="\d{0,10}"></label>
-          <label>PASSWORD <span class="asterisk">*</span><input type="password" minlength="3" class="password" required></label>
-          <label>CONFIRM PASSWORD <span class="asterisk">*</span><input type="password" minlength="3" class="confirm" required></label>
-        </form>
-        <div class="container-hero-bottom">
-          <button form="create-account">Create Account</button>
-          <p>Already have an account? <a href="#">Log in</a></p>
-        </div>
+      <form id="create-account" novalidate>
+        <h2>Let's do this!</h2>
+        <fieldset>
+          <div class="form-control">
+            <label for="first-name">FIRST NAME</label>
+            <input type="text" id="first-name" minlength="3" pattern="^[a-zA-Z]+$" required>
+            <p></p>
+          </div>
+          <div class="form-control">
+            <label for="last-name">LAST NAME</label>
+            <input type="text" id="last-name" minlength="3" pattern="^[a-zA-Z]+$" required>
+            <p></p>
+          </div>
+          <div class="form-control">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" required>
+            <p></p>
+          </div>
+          <div class="form-control">
+            <label for="phone">PHONE NUMBER</label>
+            <input type="tel" id="phone" pattern="^\d+$" minlength="10" maxlength="10">
+            <p></p>
+          </div>
+          <div class="form-control">
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" minlength="3" required>
+            <p></p>
+          </div>
+          <div class="form-control">
+            <label for="confirm">CONFIRM PASSWORD</label>
+            <input type="password" id="confirm" minlength="3" required>
+            <p></p>
+          </div>
+        </fieldset>
+      </form>
+      <section class="container-hero-bottom">
+        <button type="submit">Create Account</button>
+        <p>Already have an account? <a href="#">Log in</a></p>
       </section>
     </main>
     <footer>
